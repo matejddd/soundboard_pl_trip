@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Zvuková tlačítka</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin: 0px;
+      padding: 0px;
+    }
+    h2{
+        margin-bottom: 10px;
+    }
+    button {
+      font-size: 18px;
+      padding: 15px 30px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      background-color: #4CAF50;
+      color: white;
+      transition: background-color 0.3s;
+      width: 300px;
+    }
+    button:hover {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Zvuková tlačítka</h1>
+
+  <div class="button-container">
+    <h2>MHD</h2>
+    <button onclick="playSound('mhd_gong.mp3')">Gong</button>
+    <button onclick="playSound('mhd_odjezdlazarska.mp3')">Odjezd Lazarská</button>
+    <button onclick="playSound('mhd_brzda.mp3')">Test brzdy</button>
+    <button onclick="playSound('mhd_kradeze.mp3')">Krádeže</button>
+    <button onclick="playSound('mhd_porucha.mp3')">Porucha</button>
+    <button onclick="playSound('omezena_rychlost.mp3')">Zóna s omezenou rychlostí</button>
+    <button onclick="playSound('mhd_zpozdeni.mp3')">Zpoždění</button>
+    <button onclick="playSound('mhd_konecna.mp3')">Konečná</button>
+  </div>
+
+  <div class="button-container">
+    <h2>Vlaky</h2>
+    <button onclick="playSound('vlak_gong.mp3')">Gong</button>
+    <button onclick="playSound('vlak_uvodni_hlaseni.mp3')">Intro</button>
+    <button onclick="playSound('vlak_zpozden_lopatka.mp3')">Zpoždění – lopatka</button>
+  </div>
+
+<div class="button-container">
+    <h2>Slavné hlášky</h2>
+    <button onclick="playSound('hovado.mp3')">Hovado</button>
+    <button onclick="playSound('gadzove.mp3')">Gadžové</button>
+    <button onclick="playSound('vecere.mp3')">Večeře</button>
+    <button onclick="playSound('jsem_cikanka.mp3')">Jolanda cikánka</button>
+    <button onclick="playSound('jolanda_benga.mp3')">Jolanda benga</button>
+    <button onclick="playSound('cikansk_umim.mp3')">Cikansky umim</button>
+    <button onclick="playSound('pribeh.mp3')">Příběh jako by...</button>
+    <button onclick="playSound('bouchani.mp3')">Bouchání nebylo slyšet</button>
+    <button onclick="playSound('do_smichu_nebylo.mp3')">Nebylo do smíchu</button>
+    <button onclick="playSound('nezapomene.mp3')">Na dovolenou nezapomene</button>
+  </div>
+
+  <script>
+    function playSound(src) {
+      const audio = new Audio(src);
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>
